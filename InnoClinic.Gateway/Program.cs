@@ -1,5 +1,4 @@
-using InnoClinic.Gateway;
-using Ocelot.DependencyInjection;
+using InnoClinic.Gateway.Exstensions;
 using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,8 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
-builder.Services.AddOcelot(builder.Configuration);
-builder.Services.ConfigureJWTAuthentification(builder.Configuration);
+builder.Services.ConfigureOcelot(builder.Configuration);
 builder.Services.ConfigureCors();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -25,9 +23,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthentication();
-app.UseAuthorization();
 
 app.UseOcelot();
 
