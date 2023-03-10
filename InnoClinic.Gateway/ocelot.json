@@ -115,6 +115,18 @@
       ]
     },
     {
+      "UpstreamPathTemplate": "/gateway/Doctors/Account/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Doctors/Account/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7203
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/gateway/Patients",
       "UpstreamHttpMethod": [ "Get" ],
       "DownstreamPathTemplate": "/api/Patients",
@@ -131,6 +143,18 @@
       "UpstreamPathTemplate": "/gateway/Patients",
       "UpstreamHttpMethod": [ "Post" ],
       "DownstreamPathTemplate": "/api/Patients",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7203
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Patients/Account/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Patients/Account/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -276,9 +300,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/Specialization",
+      "UpstreamPathTemplate": "/gateway/Specializations",
       "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/api/Specialization",
+      "DownstreamPathTemplate": "/api/Specializations",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -288,9 +312,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/Specialization",
+      "UpstreamPathTemplate": "/gateway/Specializations",
       "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/api/Specialization",
+      "DownstreamPathTemplate": "/api/Specializations",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -301,9 +325,9 @@
       "Key": "SpecializationDto"
     },
     {
-      "UpstreamPathTemplate": "/gateway/Specialization/{id}",
+      "UpstreamPathTemplate": "/gateway/Specializations/{id}",
       "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
-      "DownstreamPathTemplate": "/api/Specialization/{id}",
+      "DownstreamPathTemplate": "/api/Specializations/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -330,6 +354,18 @@
       "UpstreamPathTemplate": "/gateway/Appointments",
       "UpstreamHttpMethod": [ "Get" ],
       "DownstreamPathTemplate": "/api/Appointments",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7118
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Appointments/TimeSlots/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Appointments/TimeSlots/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
